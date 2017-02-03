@@ -118,7 +118,7 @@ function custom_build_prompt {
                 fi
 
                 if [[ $has_diverged == true ]]; then
-                    prompt+=$(enrich_append true "-${commits_behind} ${omg_has_diverged_symbol} +${commits_ahead}" "${white_on_red}")
+                    prompt+=$(enrich_append true "-${commits_behind} ${omg_has_diverged_symbol} +${commits_ahead}" "${black_on_omg_theme_color}")
                 else
                     if [[ $commits_behind -gt 0 ]]; then
                         prompt+=$(enrich_append true "-${commits_behind} %F{white}${omg_can_fast_forward_symbol}%F{black} --" "${black_on_omg_theme_color}")
